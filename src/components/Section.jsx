@@ -15,6 +15,7 @@ const StyledSection = styled.div`
     & h2 {
       color: var(--dark-grey2);
       font-size: 1.5rem;
+      margin-bottom: 40px;
     }
 
     & span {
