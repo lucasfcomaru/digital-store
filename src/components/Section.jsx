@@ -25,7 +25,7 @@ const StyledSection = styled.div`
   }
 `;
 
-function Section({ title, titleAlign = "start", link }) {
+function Section({ title, titleAlign = "start", link, children }) {
   return (
     <StyledSection>
       <div style={{ justifyContent: titleAlign }}>
@@ -40,6 +40,7 @@ function Section({ title, titleAlign = "start", link }) {
           </Link>
         )}
       </div>
+      { children }
     </StyledSection>
   );
 }
