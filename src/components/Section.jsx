@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import right24px from "../assets/right24px.svg";
 
+const StyledBg = styled.div`
+  width: 100%;
+`;
+
 const StyledSection = styled.div`
   max-width: 1200px;
   margin: 0 auto;
@@ -26,23 +30,31 @@ const StyledSection = styled.div`
   }
 `;
 
-function Section({ title, titleAlign = "start", link, children }) {
+function Section({
+  title,
+  titleAlign = "start",
+  color = "#FFFFFF",
+  link,
+  children,
+}) {
   return (
-    <StyledSection>
-      <div style={{ justifyContent: titleAlign }}>
-        <h2 >{title}</h2>
+    <StyledBg style={{ background: color }}>
+      <StyledSection>
+        <div style={{ justifyContent: titleAlign }}>
+          <h2>{title}</h2>
 
-        {link && (
-          <Link to={link}>
-            <span>
-              Ver todos
-              <img src={right24px} />
-            </span>
-          </Link>
-        )}
-      </div>
-      { children }
-    </StyledSection>
+          {link && (
+            <Link to={link}>
+              <span>
+                Ver todos
+                <img src={right24px} />
+              </span>
+            </Link>
+          )}
+        </div>
+        {children}
+      </StyledSection>
+    </StyledBg>
   );
 }
 

@@ -9,6 +9,7 @@ import calcas from "../assets/calcas.svg";
 import camisetas from "../assets/camisetas.svg";
 import headphones from "../assets/headphones.svg";
 import tenis from "../assets/tenis.svg";
+import airJordan from "../assets/airJordan.png";
 
 const StyledImgColecao = styled.div`
   display: grid;
@@ -21,6 +22,22 @@ const StyledImgColecao = styled.div`
     img {
       width: 100%;
     }
+  }
+`;
+
+const StyledButtonPrimary = styled.button`
+  border: none;
+  border-radius: 4px;
+  padding: 16px 20px;
+  background-color: var(--primary);
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--white);
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+
+  &:hover {
+    background-color: var(--tertiary);
   }
 `;
 
@@ -57,7 +74,7 @@ const StyledIcons = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  
+
   .icons-circle {
     max-width: 150px;
     border-radius: 50%;
@@ -68,6 +85,7 @@ const StyledIcons = styled.div`
     align-items: center;
     filter: grayscale(1);
     transition: all ease-in-out 0.2s;
+    background-color: var(--white);
 
     &:hover {
       filter: grayscale(0);
@@ -80,10 +98,45 @@ const StyledIcons = styled.div`
   }
 `;
 
+const StyledOferta = styled.div`
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 40px;
+
+  .airJordan {
+    padding: 20px;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  .informacao-oferta {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+
+    & h4 {
+      color: var(--primary);
+    }
+
+    .titulo-oferta {
+      color: var(--dark-grey-2);
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    & button {
+      width: 200px;
+    }
+  }
+`;
+
 function HomePage() {
   return (
     <>
-      <Section title={"Coleções em destaque"}>
+      <Section title={"Coleções em destaque"} color={"#F5F5F5"}>
         <StyledImgColecao>
           <div>
             <img src={collection1} alt="" />
@@ -105,7 +158,11 @@ function HomePage() {
           </div>
         </StyledImgColecao>
       </Section>
-      <Section title={"Coleções em destaque"} titleAlign="center">
+      <Section
+        title={"Coleções em destaque"}
+        titleAlign="center"
+        color={"#F5F5F5"}
+      >
         <StyledIconsContainer>
           <StyledIcons>
             <Link to={"/productlisting"}>
@@ -155,6 +212,26 @@ function HomePage() {
         link={"/productlisting"}
       >
         <h1>teste</h1>
+      </Section>
+      <Section>
+        <StyledOferta>
+          <div className="airJordan">
+            <img src={airJordan} alt="Tênis Air Jordan" />
+          </div>
+          <div className="informacao-oferta">
+            <h4>Oferta Especial</h4>
+            <p className="titulo-oferta">Air Jordan edição de colecionador</p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis,
+              nihil consectetur dolore tenetur similique alias enim pariatur
+              modi cupiditate necessitatibus sequi quaerat corrupti repudiandae
+              adipisci molestiae eaque ipsum repellendus aliquam!
+            </p>
+            <Link to={"/productview"}>
+              <StyledButtonPrimary> Ver oferta </StyledButtonPrimary>
+            </Link>
+          </div>
+        </StyledOferta>
       </Section>
     </>
   );
