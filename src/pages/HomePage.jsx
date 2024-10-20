@@ -10,6 +10,9 @@ import camisetas from "../assets/camisetas.svg";
 import headphones from "../assets/headphones.svg";
 import tenis from "../assets/tenis.svg";
 import airJordan from "../assets/airJordan.png";
+import ProductCard from "../components/ProductCard";
+
+import tenisv8 from "../../public/tenisv8.png"
 
 const StyledImgColecao = styled.div`
   display: grid;
@@ -108,6 +111,9 @@ const StyledOferta = styled.div`
 
     & img {
       width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
     }
   }
 
@@ -210,8 +216,10 @@ function HomePage() {
         title={"Produtos em alta"}
         titleAlign="space-between"
         link={"/productlisting"}
+        color={"#F5F5F5"}
       >
-        <h1>teste</h1>
+        <ProductCard image={tenisv8} category={'Tênis'} name={'Tênis v8'} price={100} />
+        <ProductCard image={tenisv8} category={'Teste'} name={'Tênis v8 teste 2'} price={200} priceDiscount={100} />
       </Section>
       <Section>
         <StyledOferta>
