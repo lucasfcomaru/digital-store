@@ -12,11 +12,6 @@ const FooterContainer = styled.footer`
   color: var(--white);
   font-size: 1rem;
 
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
   #footer-geral {
     display: grid;
     grid-template-columns: 5fr 7fr;
@@ -134,7 +129,7 @@ function Footer() {
       <FooterContainer aria-label="rodapé">
         <div id="footer-geral" className="container">
           <div id="logo-footer">
-            <StyledLogo />
+            <Link to={ "/" }><StyledLogo /></Link>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia
               sequi accusamus modi dolores culpa. Adipisci dolores dolor dicta
