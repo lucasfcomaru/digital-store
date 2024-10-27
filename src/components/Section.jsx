@@ -11,7 +11,7 @@ const StyledSection = styled.div`
   margin: 0 auto;
   padding: 60px 0;
 
-  div {
+  .title {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -40,7 +40,7 @@ function Section({
   return (
     <StyledBg style={{ background: color }}>
       <StyledSection>
-        <div style={{ justifyContent: titleAlign }}>
+        <div className="title" style={{ justifyContent: titleAlign }}>
           <h2>{title}</h2>
 
           {link && (

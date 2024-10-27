@@ -10,9 +10,7 @@ import camisetas from "../assets/camisetas.svg";
 import headphones from "../assets/headphones.svg";
 import tenis from "../assets/tenis.svg";
 import airJordan from "../assets/airJordan.png";
-import ProductCard from "../components/ProductCard";
-
-import tenisv8 from "../../public/tenisv8.png"
+import ProductListing from "../components/ProductListing";
 
 const StyledImgColecao = styled.div`
   display: grid;
@@ -218,8 +216,7 @@ function HomePage() {
         link={"/productlisting"}
         color={"#F5F5F5"}
       >
-        <ProductCard image={tenisv8} category={'Tênis'} name={'Tênis v8'} price={100} />
-        <ProductCard image={tenisv8} category={'Teste'} name={'Tênis v8 teste 2'} price={200} priceDiscount={100} />
+          <ProductListing className="container" />
       </Section>
       <Section>
         <StyledOferta>
