@@ -11,6 +11,7 @@ import headphones from "../assets/headphones.svg";
 import tenis from "../assets/tenis.svg";
 import airJordan from "../assets/airJordan.png";
 import ProductListing from "../components/ProductListing";
+import Gallery from "../components/Gallery";
 
 const StyledImgColecao = styled.div`
   display: grid;
@@ -140,6 +141,7 @@ const StyledOferta = styled.div`
 function HomePage() {
   return (
     <>
+      <Gallery />
       <Section title={"Coleções em destaque"} color={"#F5F5F5"}>
         <StyledImgColecao>
           <div>
@@ -216,7 +218,7 @@ function HomePage() {
         link={"/productlisting"}
         color={"#F5F5F5"}
       >
-          <ProductListing className="container" />
+        <ProductListing className="container" />
       </Section>
       <Section>
         <StyledOferta>
