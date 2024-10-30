@@ -138,6 +138,62 @@ const StyledOferta = styled.div`
   }
 `;
 
+const produtos = [
+  {
+    name: "K-Swiss V8 - Masculino",
+    image: "../../public/tenisv8.png",
+    category: "Tênis",
+    price: 200,
+    priceDiscount: 149.9,
+  },
+  {
+    name: "K-Swiss V8 - Masculino",
+    image: "../../public/tenisv8.png",
+    category: "Tênis",
+    price: 200,
+  },
+  {
+    name: "K-Swiss V8 - Masculino",
+    image: "../../public/tenisv8.png",
+    category: "Tênis",
+    price: 200,
+  },
+  {
+    name: "K-Swiss V8 - Masculino",
+    image: "../../public/tenisv8.png",
+    category: "Tênis",
+    price: 200,
+    priceDiscount: 149.9,
+  },
+  {
+    name: "K-Swiss V8 - Masculino",
+    image: "../../public/tenisv8.png",
+    category: "Tênis",
+    price: 200,
+    priceDiscount: 149.9,
+  },
+  {
+    name: "K-Swiss V8 - Masculino",
+    image: "../../public/tenisv8.png",
+    category: "Tênis",
+    price: 200,
+    priceDiscount: 149.9,
+  },
+  {
+    name: "K-Swiss V8 - Masculino",
+    image: "../../public/tenisv8.png",
+    category: "Tênis",
+    price: 200,
+    priceDiscount: 149.9,
+  },
+  {
+    name: "K-Swiss V8 - Masculino",
+    image: "../../public/tenisv8.png",
+    category: "Tênis",
+    price: 200,
+  },
+];
+
 function HomePage() {
   return (
     <>
@@ -218,7 +274,7 @@ function HomePage() {
         link={"/productlisting"}
         color={"#F5F5F5"}
       >
-        <ProductListing className="container" />
+        <ProductListing className="container" produtos={produtos} />
       </Section>
       <Section>
         <StyledOferta>

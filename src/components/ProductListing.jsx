@@ -1,69 +1,13 @@
 import styled from "styled-components";
 import ProductCard from "./ProductCard";
 
-const produtos = [
-  {
-    name: "K-Swiss V8 - Masculino",
-    image: "../../public/tenisv8.png",
-    category: "Tênis",
-    price: 200,
-    priceDiscount: 149.9,
-  },
-  {
-    name: "K-Swiss V8 - Masculino",
-    image: "../../public/tenisv8.png",
-    category: "Tênis",
-    price: 200,
-  },
-  {
-    name: "K-Swiss V8 - Masculino",
-    image: "../../public/tenisv8.png",
-    category: "Tênis",
-    price: 200,
-  },
-  {
-    name: "K-Swiss V8 - Masculino",
-    image: "../../public/tenisv8.png",
-    category: "Tênis",
-    price: 200,
-    priceDiscount: 149.9,
-  },
-  {
-    name: "K-Swiss V8 - Masculino",
-    image: "../../public/tenisv8.png",
-    category: "Tênis",
-    price: 200,
-    priceDiscount: 149.9,
-  },
-  {
-    name: "K-Swiss V8 - Masculino",
-    image: "../../public/tenisv8.png",
-    category: "Tênis",
-    price: 200,
-    priceDiscount: 149.9,
-  },
-  {
-    name: "K-Swiss V8 - Masculino",
-    image: "../../public/tenisv8.png",
-    category: "Tênis",
-    price: 200,
-    priceDiscount: 149.9,
-  },
-  {
-    name: "K-Swiss V8 - Masculino",
-    image: "../../public/tenisv8.png",
-    category: "Tênis",
-    price: 200,
-  },
-];
-
 const StyledProductListingContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
 `;
 
-function ProductListing() {
+function ProductListing({ produtos }) {
   return (
     <>
       <StyledProductListingContainer>
