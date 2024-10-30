@@ -1,7 +1,14 @@
+import FilterGroup from "../components/FilterGroup";
+import OrderBy from "../components/OrderBy";
+import Section from "../components/Section";
+
 function ProductListingPage() {
     return (
         <>
-            <h1>product listing page</h1>
+            <Section color={"#F5F5F5"}>
+                <OrderBy />
+                <FilterGroup />
+            </Section>
         </>
     );
 }
