@@ -9,7 +9,7 @@ const StyledBg = styled.div`
 const StyledSection = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 0;
+  /* padding: 60px 0; */
 
   .title {
     width: 100%;
@@ -36,9 +36,10 @@ function Section({
   color = "#FFFFFF",
   link,
   children,
+  padd="60px 0"
 }) {
   return (
-    <StyledBg style={{ background: color }}>
+    <StyledBg style={{ background: color, padding: padd }}>
       <StyledSection>
         <div className="title" style={{ justifyContent: titleAlign }}>
           <h2>{title}</h2>

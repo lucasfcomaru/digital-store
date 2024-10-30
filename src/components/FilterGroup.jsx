@@ -2,9 +2,9 @@ import styled from "styled-components";
 import Filter from "./Filter";
 
 const StyledFilterGroup = styled.div`
-  width: 300px;
   padding: 30px;
   background-color: var(--white);
+  height: fit-content;
 
   & h3 {
     color: var(--dark-grey-2);

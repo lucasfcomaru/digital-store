@@ -7,10 +7,10 @@ const StyledProductListingContainer = styled.div`
   gap: 16px;
 `;
 
-function ProductListing({ produtos }) {
+function ProductListing({ produtos, cols }) {
   return (
     <>
-      <StyledProductListingContainer>
+      <StyledProductListingContainer style={{gridTemplateColumns: cols}}>
         {produtos.map((produto, indice) => {
           if (produto.priceDiscount) {
             return (
