@@ -58,6 +58,24 @@ const StyledBuyBox = styled.div`
   }
 `;
 
+const StyledButtonPrimary = styled.button`
+  border: none;
+  border-radius: 4px;
+  padding: 16px 52px;
+  margin-top: 20px;
+  background-color: var(--warning);
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--white);
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+  width: max-content;
+
+  &:hover {
+    background-color: #e49607;
+  }
+`;
+
 function BuyBox({
   name,
   reference,
@@ -89,6 +107,7 @@ function BuyBox({
         </div>
         <p>{description}</p>
         {children}
+        <StyledButtonPrimary>COMPRAR</StyledButtonPrimary>
       </StyledBuyBox>
     </>
   );
