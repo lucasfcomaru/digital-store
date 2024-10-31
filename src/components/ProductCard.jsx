@@ -62,12 +62,12 @@ const StyledCardContainer = styled.div`
   }
 `;
 
-function ProductCard({ image, category, name, price, priceDiscount }) {
+function ProductCard({ image, category, name, price, priceDiscount, id }) {
   return (
     <>
       <StyledCardContainer>
         {priceDiscount ? (
-          <Link to={"/productview"}>
+          <Link to={`/product/:${id}`}>
             <div className="product-card">
               <div className="product-img">
                 <img src={image} alt="" />
@@ -83,7 +83,7 @@ function ProductCard({ image, category, name, price, priceDiscount }) {
             </div>
           </Link>
         ) : (
-          <Link to={"/productview"}>
+          <Link to={`/product/:${id}`}>
             <div className="product-card">
               <div className="product-img">
                 <img src={image} alt="" />

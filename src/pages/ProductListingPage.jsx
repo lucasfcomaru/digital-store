@@ -79,7 +79,7 @@ function ProductListingPage() {
       <Section color={"#F5F5F5"} padd={"60px 0 20px"}>
         <OrderBy />
       </Section>
-      <Section color={"#F5F5F5"} padd={"20px 0 60px"}>
+      <Section color={"#F5F5F5"} padd={"20px 0 120px"}>
         <StyledProductContainer>
           <FilterGroup />
           <ProductListing produtos={produtos} cols={"repeat(3, 1fr)"}/>

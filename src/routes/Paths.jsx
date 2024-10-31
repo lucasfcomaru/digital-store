@@ -14,7 +14,7 @@ function Paths() {
         <Routes>
           <Route path="/" element={<PageLayout />}>
             <Route index element={<HomePage />} />
-            <Route path="/productview" element={<ProductViewPage />} />
+            <Route path="/product/:id" element={<ProductViewPage />} />
             <Route path="/productlisting" element={<ProductListingPage />} />
             <Route path="/category" element={<Category />} />
             <Route path="/pedidos" element={<Pedidos />} />

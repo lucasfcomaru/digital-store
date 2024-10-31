@@ -21,6 +21,7 @@ function ProductListing({ produtos, cols }) {
                   name={produto.name}
                   price={produto.price}
                   priceDiscount={produto.priceDiscount}
+                  id={produto.name.toLowerCase().replace(" ", "-")}
                 />
               </div>
             );
@@ -32,6 +33,7 @@ function ProductListing({ produtos, cols }) {
                   category={produto.category}
                   name={produto.name}
                   price={produto.price}
+                  id={produto.name.toLowerCase().replace(" ", "-")}
                 />
               </div>
             );
