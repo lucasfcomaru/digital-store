@@ -10,7 +10,7 @@ const StyledProductListingContainer = styled.div`
 function ProductListing({ produtos, cols }) {
   return (
     <>
-      <StyledProductListingContainer style={{gridTemplateColumns: cols}}>
+      <StyledProductListingContainer style={{ gridTemplateColumns: cols }}>
         {produtos.map((produto, indice) => {
           if (produto.priceDiscount) {
             return (
@@ -22,6 +22,10 @@ function ProductListing({ produtos, cols }) {
                   price={produto.price}
                   priceDiscount={produto.priceDiscount}
                   id={produto.name.toLowerCase().replace(" ", "-")}
+                  reference={produto.ref}
+                  stars={produto.stars}
+                  rating={produto.rating}
+                  description={produto.description}
                 />
               </div>
             );
@@ -34,6 +38,10 @@ function ProductListing({ produtos, cols }) {
                   name={produto.name}
                   price={produto.price}
                   id={produto.name.toLowerCase().replace(" ", "-")}
+                  reference={produto.reference}
+                  stars={produto.stars}
+                  rating={produto.rating}
+                  description={produto.description}
                 />
               </div>
             );
