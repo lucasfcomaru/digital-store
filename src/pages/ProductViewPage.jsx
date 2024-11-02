@@ -4,6 +4,7 @@ import ProductListing from "../components/ProductListing";
 import Section from "../components/Section";
 import BuyBox from "../components/BuyBox";
 import { useParams } from "react-router-dom";
+import ProductOptions from "../components/ProductOptions";
 
 const StyledProductContainer = styled.div`
   display: grid;
@@ -87,7 +88,9 @@ function ProductViewPage() {
             price={price}
             priceDiscount={priceDiscount}
             description={description}
-          />
+          >
+            <ProductOptions />
+          </BuyBox>
         </StyledProductContainer>
       </Section>
       <Section
