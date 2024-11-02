@@ -96,7 +96,7 @@ npm install
 ```
 npm run dev
 ```
-### Deploy
+### 🎮 Deploy
 <p align="left">
     Veja o projeto completo em:
     <a href="https://digital-store-snowy.vercel.app/"> https://digital-store-snowy.vercel.app/</a>
