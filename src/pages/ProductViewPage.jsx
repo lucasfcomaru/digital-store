@@ -12,6 +12,14 @@ const StyledProductContainer = styled.div`
   gap: 60px;
 `;
 
+const StyledCaminho = styled.span`
+  width: 100%;
+  color: var(--dark-grey-2);
+  font-size: 0.875rem;
+  display: block;
+  margin-bottom: 40px;
+`;
+
 const productImages = [
   { src: "/product-image-1.jpg" },
   { src: "/product-image-2.jpg" },
@@ -77,7 +85,8 @@ function ProductViewPage() {
 
   return (
     <>
-      <Section>
+      <Section padd="20px 0 60px" color={"#F5F5F5"}>
+        <StyledCaminho><strong>Home</strong> / Produtos / Tênis / Tênis Nike Revolution 6 Next Nature Masculino</StyledCaminho>
         <StyledProductContainer>
           <ProductGallery images={productImages} />
           <BuyBox
@@ -98,6 +107,7 @@ function ProductViewPage() {
         link={"/productlisting"}
         padd={"60px 0 120px"}
         titleAlign="space-between"
+        color={"#F5F5F5"}
       >
         <ProductListing produtos={produtos} />
       </Section>
