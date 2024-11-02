@@ -99,5 +99,5 @@ npm run dev
 ### Deploy
 <p align="left">
     Veja o projeto completo em:
-    <a href="https://digital-store-snowy.vercel.app/" target="_blank"> https://digital-store-snowy.vercel.app/</a>
+    <a href="https://digital-store-snowy.vercel.app/"> https://digital-store-snowy.vercel.app/</a>
 </p>
